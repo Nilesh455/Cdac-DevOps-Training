@@ -1,0 +1,434 @@
+
+Github 
+1. Version control system
+2. Keep track of modifications made by different users
+3. Can work offline also. Create local repo 
+4. Allows to create public as well as private repos
+
+#Version Control Systems
+1. Github
+2. Mercurial
+3. SubVersin control
+
+
+Login to github
+Create new repository
+
+Code - all files in repo
+
+current URL - project URL ( https://github.com/Nilesh455/Cdac-DevOps-Training )
+
+download gitbash -  https://git-scm.com/download/win install 
+
+Git bash here option
+
+git clone https://github.com/Nilesh455/Cdac-DevOps-Training.git
+	It will clone your repo on local machine. You will see your repo name folder. Inside folder .git folder.
+
+Folder contains/shows only files of current master/branch
+
+
+Inside folder -> right click -> Git bash here
+
+$git status
+	Show new and modification to files 
+----------------------------------------------------------
+$git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+
+----------------------------------------------------------
+
+$git add filename   -> add single file (add it to index)
+
+$git add -A  ->  add all files
+
+================================================
+### To commit in local repo
+================================================ 
+
+$git commit -m "Test File Message"
+
+$git config --global user.email "you@example.com"
+$git config --global user.name "Your Name"
+
+### To push commited file from local repo to Github repo
+
+$git push
+	It will ask for github crudentials
+
+##### if other user entry is registered in windows crudentials
+	Control panel -> User Account -> Crudential manager -> windows crudentials -> find github entry -> remove
+
+----------------------------------------------------------
+$git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 296 bytes | 296.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/Nilesh455/Dev-Ops-Test-Repo.git
+   c97d745..25e42fa  master -> master
+-----------------------------------------------------------
+
+
+check on your Github repo whether the file is updated there or not
+	https://github.com/Nilesh455/Cdac-DevOps-Training	
+
+
+#### Add Code on Github repo and get it on local
+
+Add a file in Github repo
+
+In Local Repo folder
+
+$git pull
+	Get files from Github repo to local machine
+
+--------------------------------------------------------------
+$git pull
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/Nilesh455/Cdac-DevOps-Training
+   e406ded..3bf8683  master     -> origin/master
+Updating e406ded..3bf8683
+Fast-forward
+ GithubRepoFile.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 GithubRepoFile.txt
+-------------------------------------------------------------
+
+
+===============================================================================
+#####  Branching
+===============================================================================
+
+branch take data from master
+
+In local repo folder after creating branch on Github and adding files in it
+
+$ git pull
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/Nilesh455/Cdac-DevOps-Training
+ * [new branch]      FrontEnd   -> origin/FrontEnd
+Already up to date.
+
+
+$ git checkout FrontEnd
+Switched to a new branch 'FrontEnd'
+Branch 'FrontEnd' set up to track remote branch 'FrontEnd' from 'origin'.
+
+
+
+$ git status
+On branch FrontEnd
+Your branch is up to date with 'origin/FrontEnd'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        FrontEnd.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+
+
+File added inside this repo will be shown in both master as well as branch that it is added or modified. Add it in master or branch and commit then it will not show it in other.
+
+--------------------------------------------------
+$ git commit
+[FrontEnd 4ac6b9e] File Committed on FrontEnd Branch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 FrontEndFile_2.txt
+
+------------------------------------------------------
+
+
+#########
+
+git merge --help
+
+$ git merge FrontEnd
+	merge branch FrontEnd with parent branch here master.
+
+----------------------------------------------
+$ git merge FrontEnd
+Merge made by the 'recursive' strategy.
+ FrontEndFile_2.txt | 1 +
+ brachFile1         | 1 +
+ 2 files changed, 2 insertions(+)
+ create mode 100644 FrontEndFile_2.txt
+ create mode 100644 brachFile1
+----------------------------------------------
+
+
+##############
+
+Go to Github repo open file and modify it commit
+
+
+In Local Repo folder
+
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 4 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+
+$git add -A
+
+$ git commit -m "File1.txt modified in local"
+[master 4c3d5ac] File1.txt modified in local
+ 1 file changed, 3 insertions(+)
+
+
+$ git push origin master
+	if origin not mentioned it will take master y default.
+
+-------------------------------------------
+
+$ git push origin master
+To https://github.com/Nilesh455/Cdac-DevOps-Training.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/Nilesh455/Cdac-DevOps-Training.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+----------------------------------------------
+
+
+$ git pull origin master
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/Nilesh455/Cdac-DevOps-Training
+ * branch            master     -> FETCH_HEAD
+   3bf8683..aa2aa01  master     -> origin/master
+Auto-merging file1.txt
+CONFLICT (content): Merge conflict in file1.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+-------------------------------------------------------------------
+
+
+vim file1.txt
+
+
+Test code File
+
+<<<<<<< HEAD
+
+Added New Line in Local Repo file1.txts
+=======
+Modified
+>>>>>>> aa2aa01d2a279ac45a8aecd24ac3b717fdcb3f65
+
+
+
+HP@DESKTOP-122IDLJ MINGW64 ~/Desktop/RN/GitFolder/Cdac-DevOps-Training (master|MERGING)
+
+$ git push
+To https://github.com/Nilesh455/Cdac-DevOps-Training.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/Nilesh455/Cdac-DevOps-Training.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+
+$ git merge --continue
+[master eafcfd7] Merge branch 'master' of https://github.com/Nilesh455/Cdac-DevOps-Training
+
+
+$ git push
+Enumerating objects: 20, done.
+Counting objects: 100% (19/19), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (14/14), 1.46 KiB | 374.00 KiB/s, done.
+Total 14 (delta 4), reused 0 (delta 0)
+remote: Resolving deltas: 100% (4/4), done.
+To https://github.com/Nilesh455/Cdac-DevOps-Training.git
+   aa2aa01..eafcfd7  master -> master
+
+
+#######  Share repo
+
+Setting -> ccollaborators
+
+===============================================================================
+######### File modified on local but want previous version of file
+	(before add you can revert bak)
+=============================================================================== 
+
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file1.txt
+
+
+
+$ git checkout file1.txt
+Updated 1 path from the index
+
+==================================================================================================
+############## File modified on local but want previous version of file and File is added in repo
+==================================================================================================
+	
+
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   "C\357\200\272UsersHPDesktopRNNotes"
+        new file:   "C\357\200\272UsersHPDesktopRNNoteshistory.txt"
+        modified:   file1.txt
+        new file:   history.txt
+
+$ git reset HEAD file1.txt
+Unstaged changes after reset:
+M       file1.txt
+
+
+$ git checkout file1.txt
+Updated 1 path from the index
+
+file reverted back to previous version
+
+
+======================================================================================================================
+################# File modified on local but want previous version of file and File is added in repo and comitted also
+======================================================================================================================
+
+$git revert <text after commit in git log>
+
+------------------------------
+$ git log
+commit 2bfe4486ede6565fe0f5b5404ab14cda3fbc6d3a (HEAD -> master)
+Author: Nilesh455 <rautbnilesh@gmail.com>
+Date:   Tue Oct 1 12:54:24 2019 +0530
+
+    New Committ
+
+commit 700be08afa127fa31bf2e82aa7985348edae274b (origin/master, origin/HEAD)
+Author: nikhildiwate <diwatenikhil5@gmail.com>
+Date:   Tue Oct 1 12:18:01 2019 +0530
+
+    new file from ND
+
+commit eafcfd74e7d914bbe526cbdc62f9fceb270c8309
+Merge: 4c3d5ac aa2aa01
+Author: Nilesh455 <rautbnilesh@gmail.com>
+Date:   Tue Oct 1 12:04:39 2019 +0530
+
+    Merge branch 'master' of https://github.com/Nilesh455/Cdac-DevOps-Training
+
+commit 4c3d5ac2412f0a1679f4d32c98e8c813daeb3037
+Author: Nilesh455 <rautbnilesh@gmail.com>
+Date:   Tue Oct 1 11:54:16 2019 +0530
+
+    File1.txt modified in local
+
+commit aa2aa01d2a279ac45a8aecd24ac3b717fdcb3f65
+Author: Nilesh455 <37395651+Nilesh455@users.noreply.github.com>
+Date:   Tue Oct 1 11:50:39 2019 +0530
+
+    File1 modified
+
+commit 2642e8cb811a13acd769516fc71f79ee00f79ed7
+Merge: 0d1894a 4ac6b9e
+Author: Nilesh455 <rautbnilesh@gmail.com>
+Date:   Tue Oct 1 11:44:39 2019 +0530
+
+    Merge branch 'FrontEnd'
+
+commit 4ac6b9e52c2165877b863e38c9d20af29166ef83 (FrontEnd)
+Author: Nilesh455 <rautbnilesh@gmail.com>
+Date:   Tue Oct 1 11:39:18 2019 +0530
+
+    File Committed on FrontEnd Branch
+
+
+
+$ git revert 700be08afa127fa31
+[master bcb11fa] Revert "new file from ND"
+ 1 file changed, 2 deletions(-)
+ delete mode 100644 nd_test_file.txt
+
+
+$ git show
+commit bcb11fa1ac7eb7090d618b3bc83335f3e161ea22 (HEAD -> master)
+Author: Nilesh455 <rautbnilesh@gmail.com>
+Date:   Tue Oct 1 12:55:50 2019 +0530
+
+    Revert "new file from ND"
+
+    This reverts commit 700be08afa127fa31bf2e82aa7985348edae274b.
+
+diff --git a/nd_test_file.txt b/nd_test_file.txt
+deleted file mode 100644
+index d479b33..0000000
+--- a/nd_test_file.txt
++++ /dev/null
+@@ -1,2 +0,0 @@
+-crted by ND
+-
+
+
+#####################################
+
+=========================================================
+######### Create branch on local 
+=========================================================
+
+$ git branch devOpesBranch
+
+$ git checkout devOpesBranch
+
+$ notepad branch1.txt
+
+$ git add -A
+
+$ git commit -m "Committing Branch File"
+
+$ git push --set-upstream origin devOpesBranch
+
+
+	

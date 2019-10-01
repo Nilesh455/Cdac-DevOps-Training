@@ -18,7 +18,7 @@
    18  ls
    19  git config --global user.email "rautbnilesh@gmail.com"
    20  git config --global user.name "Nilesh455"
-   21* git commit -m "Test File Commit cm
+   21  git commit -m "Test File Commit cm
    22  git status
    23  git push
    24  ls
@@ -254,3 +254,22 @@
   254  cd Cdac-DevOps-Training/
   255  ls
   256  history > history.txt
+  257  ls
+  258  git status
+  259  git add -a
+  260  git add -A
+  261  git commit -m "Committing history"
+  262  git push
+  263  cd ..
+  264  ls
+  265  clear
+  266  ls
+  267  exit
+  268  ls
+  269  git status
+  270  git add -A
+  271  git commit -m "Committig Notes on GitHub"
+  272  git push
+  273  exit
+  274  ls
+  275  history > history.txt

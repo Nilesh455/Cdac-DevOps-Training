@@ -1,0 +1,137 @@
+    1  ls
+    2  pwd
+    3  git clone https://github.com/Nilesh455/Cdac-DevOps-Training.git
+    4  ls
+    5  cd Cdac-DevOps-Training/
+    6  ls
+    7  cd ..
+    8  ls
+    9  clear
+   10  ls
+   11  cd Cdac-DevOps-Training/
+   12  git status
+   13  get add file1.txt 
+   14  git add file1.txt 
+   15  git add -A
+   16  git status
+   17  git commit -m "Test File Commit cmd"
+   18  ls
+   19  git config --global user.email "rautbnilesh@gmail.com"
+   20  git config --global user.name "Nilesh455"
+   21* git commit -m "Test File Commit cm
+   22  git status
+   23  git push
+   24  ls
+   25  pwd
+   26  cd ..
+   27  ls
+   28  git clone https://github.com/Nilesh455/Dev-Ops-Test-Repo.git
+   29  ls
+   30  cd Dev-Ops-Test-Repo/
+   31  ls
+   32  mk file1.txt
+   33  vim file1.txt
+   34  ls
+   35  ls
+   36  git status
+   37  git add -A
+   38  ls
+   39  git commit -m "Test messsage"
+   40  git push
+   41  git
+   42  ls
+   43  cd ..
+   44  ls
+   45  cd Cdac-DevOps-Training/
+   46  ls
+   47  git pull
+   48  ls
+   49  ls
+   50  git pull
+   51  git checkout FrontEnd
+   52  ls
+   53  ls
+   54  git status
+   55  ls
+   56  cd ..
+   57  ls
+   58  git checkout Cdac-DevOps-Training/
+   59  git checkout Cdac-DevOps-Training
+   60  git checkout master Cdac-DevOps-Training
+   61  git checkout master
+   62  git checkout master
+   63  ls
+   64  cd Cdac-DevOps-Training/
+   65  git checkout master
+   66  git add -A
+   67  ls
+   68  clear
+   69  git commit
+   70  git status
+   71  ls
+   72  ls
+   73  git status
+   74  git checkout FrontEnd
+   75  ls
+   76  git status
+   77  git add -A
+   78  ls
+   79  git commit
+   80  ls
+   81  git checkout master
+   82  ls
+   83  git status
+   84  git checkout FrontEnd
+   85  git merge --help
+   86  clear
+   87  giit checkout master
+   88  git checkout master
+   89  git merge FrontEnd
+   90  ls
+   91  ls
+   92  git status
+   93  git add -A
+   94  git commit -m "File1.txt modified in local"
+   95  git push origin master
+   96  get pull origin master
+   97  git pull origin master
+   98  vim file1.txt 
+   99  vim file1.txt 
+  100  git status
+  101  git push
+  102  git add -A
+  103  git --continue merge
+  104  git merge --continue
+  105  git push
+  106  history --help
+  107  history > C:\Users\HP\Desktop\RN\Notes
+  108  history > C:\Users\HP\Desktop\RN\Notes\history.txt
+  109  history
+  110  ls
+  111  history > C:\Users\HP\Desktop\RN\Notes\history.txt
+  112  cd ..
+  113  ls
+  114  git clone https://github.com/nikhildiwate/nd_test_global.git
+  115  ls
+  116  cd nd_test_global/
+  117  ls
+  118  ls
+  119  ls
+  120  vim RN.txt
+  121  add -A
+  122  git add -A
+  123  git commit -m "Committed by RN"
+  124  ls
+  125  git push
+  126  git pull
+  127  ls
+  128  cd ..
+  129  ls
+  130  cd Cdac-DevOps-Training/
+  131  ls
+  132  git pull
+  133  ls
+  134  history > C/User/HP/Desktop/RN/Notes/History.txt
+  135  history > C:/User/HP/Desktop/RN/Notes/History.txt
+  136  history > "C:\Users\HP\Desktop\RN\Notes\history.txt"
+  137  history > history.txt
